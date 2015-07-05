@@ -1,0 +1,97 @@
+---
+layout: post
+title: "how i learn"
+description: ""
+tags: ["learning", "major league pong"]
+---
+
+Back in 2012, I was a sophomore in college. Over winter break I
+decided to learn how to write iOS apps. Fortunately, I'd learned Objective-C a
+couple years earlier but I still had to get my feet wet with Xcode and the iOS
+SDK. During that break I learned a bit of game development and also plain
+iOS development to give myself a solid springboard for whatever I decided I
+liked more.
+
+When I got back to class, I had to take my "CS capstone" class, _Software Design
+and Documentation_. We called it SD&D. It's a capstone class because
+it was the last class in the CS track at my school. At the time, I thought it was a
+complete blowoff and an easy A. However, to my surprise, I'm still realizing things I learned in that
+class.
+
+It had a loose curriculum; we grouped ourselves into collections of
+three to five and chose a project to work on. I was in the class with three guys
+from my fraternity and we all lived in the same house, which made grouping
+together perfect for us. Then someone had a great idea: Major League
+Pong.
+
+Every semester, our house held an in-house beer pong tournament
+one night per week. Every game had a referee that kept a scoresheet for that
+game:
+
+![Major League Pong Scoresheet](/images/mlp.jpg)
+
+After each week, the league commissioner (AKA guy whose job it was to get the
+keg and do drunk number crunching), would calculate everyone's OPP (overall 
+point percentage) by hand and throw it up on a static page local to the house
+network.
+
+Your OPP was calculated as follows:
+
+```
+regular cup hits + (rerack cup hits * 2) + (game winning cup hits * 3)
+------------------------------------------------------------------------
+                              shots taken
+```
+
+(see scoresheet image for key: regular cup hits are numbers without a container, rerack cup hits are circled,
+and game winning cups are enclosed in a triangle)
+
+You could then average OPPs by team and such to get a broader picture of who
+was trending up and who really, really sucked. We held one of these tournaments
+every semester, selecting new teams each time.
+
+The professors of SD&D allowed us to work on this for our project, which made it
+way more fun than it would have been otherwise. We were our own audience and it was great!
+We got to use the toolchains we wanted and support the devices we
+cared about. Josh wrote the web app and API in rails, I wrote the iOS app in
+Objective-C, James wrote the Android app using whatever those guys use, and Rory
+did all the paperwork for the class. Rory, I am sorry.
+
+I think one of the first things I learned was how to model things well. We even got
+to come up with some cool terminology:
+
+* A _League_ is a group of players. We had one league for our house in practice,
+but the idea was that other houses may want to use MLP too.
+
+* A _Season_ is a semester's long tournament among a group of players (and
+therefor scoped to within a league)
+
+* A _Team_ is a collection of three players and scoped to within a season (we chose
+new teams each semester)
+
+Working on an app we were all an active and caring audience for made the learning fun. The domain for
+this app necessitated learning how to think in terms of the entire stack. How
+should concept X be modeled? Which parts should the API serve to which clients?
+How should it be displayed once the information is sent over the wire?
+
+Since 2012, I've rewritten MLP (the whole app and sometimes just singular parts), tens of times. It's
+a good domain space that I understand well and makes me feel good to work on.
+If you can discover a similar app idea and iterate over it to learn new tools
+, I encourage you to. There are always gotchas when learning how to
+use new tools. Writing this app usually led me to many of those
+gotchas, which is the first step in learning how to overcome them.
+
+And there are still dark corners in this app's map; gotchas that I haven't
+figured out yet. Like, what if another house wants to play by
+different rules? What if they don't do balls back?
+What if they don't do automatic reracks at six and three like
+we do? What if they fight for the balls like a
+bunch of drunk idiots instead of taking turns like us civil drunks?
+Decisions around these things really mess with the mechanics of how a game is
+structured.
+
+I learned how to use Xcode with storyboards by writing MLP. I learned how to
+write RESTFUL web APIs with Sinatra by writing MLP. I must've rewritten the iOS
+client in ruby using [Rubymotion](http://rubymotion.com) at least five times. If you look at README
+examples for gems I've written in Github, you can see in most of them that I was
+thinking of the models from MLP.
