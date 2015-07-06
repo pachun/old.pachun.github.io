@@ -9,7 +9,7 @@ highlighter: pygments
 
 paginate: 20
 baseurl: /
-domain_name: 'http://pachulski.me'
+domain_name: 'pachulski.me'
 google_analytics: 'UA-XXXXXXXX-X'
 
 # Details for the RSS feed generator
