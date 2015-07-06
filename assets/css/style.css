@@ -73,28 +73,20 @@ h2 {
 	padding: 100px 40px 0px;
 	max-width: 600px;
 	margin: 0 auto;
-}
-
-.profile #github {
-  float: left;
-}
-
-.profile #twitter {
-  float: right;
+  text-align: center;
 }
 
 .profile #contact {
-  margin: 0px auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
   overflow: auto;
-  width: 50%;
+  display: inline-block;
+  line-height: 28px;
+  text-align: left;
 }
 
 .profile #header {
 	border-bottom: 1px solid #eee;
 	margin-bottom: 40px;
-	/* padding-bottom: 40px; */
+	padding-bottom: 40px;
 	text-align: center;
 	position: relative;
 }
