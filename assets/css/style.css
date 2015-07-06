@@ -79,6 +79,7 @@ h2 {
 .profile #contact {
   overflow: auto;
   display: inline-block;
+  letter-spacing: 10px;
   line-height: 28px;
   text-align: left;
   margin-top: 20px;
