@@ -81,13 +81,13 @@ h2 {
   display: inline-block;
   line-height: 28px;
   text-align: left;
-  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .profile #header {
 	border-bottom: 1px solid #eee;
 	margin-bottom: 40px;
-	padding-bottom: 40px;
+	padding-bottom: 20px;
 	text-align: center;
 	position: relative;
 }
