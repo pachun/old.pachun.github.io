@@ -1,0 +1,89 @@
+#resume {
+  font-size: 18pt;
+}
+
+.resume-header {
+  color: #aaa;
+  text-align: right;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.resume-title {
+  font-family: "Open Sans";
+  text-align: right;
+  color: #000;
+}
+
+.experience-header {
+  width: 100%;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.experience-title {
+  color: #000;
+  font-weight: bold;
+  display: inline-block;
+  float: left;
+  margin-right: 10px;
+}
+
+.title-company-separator {
+  text: "/";
+}
+
+.experience-company {
+  display: inline-block;
+}
+
+.timeframe {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  font-size: 10pt;
+  font-style: italic;
+  display: inline-block;
+}
+
+.experience-description {
+  font-size: 14pt;
+  line-height: 18pt;
+  margin-bottom: 40px;
+}
+
+.resume-list {
+  list-style: none;
+  list-style-type: none;
+  list-style-position: inside;
+  list-style-image: none;
+}
+
+#skillset-table {
+  color: #000;
+  width: 100%;
+  font-size: 16pt;
+}
+
+#technologies {
+  width: 50%;
+  float: left;
+  text-align: center;
+}
+
+#tools {
+  width: 50%;
+  float: right;
+  text-align: center;
+}
+
+.resume-table-header {
+  font-weight: bold;
+}
+
+.table-item {
+  margin-top: 10px;
+  font-size: 14pt;
+}
