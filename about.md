@@ -24,8 +24,8 @@ class NickPachulski
 
   def open_source_contributions
   {
-    courier: "http://github.com/pachun/bureau",
-    bureau: "https://github.com/pachun/Courier",
+    bureau: "http://github.com/pachun/bureau",
+    courier: "https://github.com/pachun/Courier",
   }
   end
 end
