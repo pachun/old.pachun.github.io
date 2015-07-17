@@ -47,11 +47,11 @@ gitx
 # ABR! always be refactoring!
 
 # show the world
-git push origin feature-or-bugix
+git push origin feature-or-bugfix
 
-# sumbit a pull request and tag some people for review
+# submit a pull request and tag some people for review
 
-# receive feedback and add additional commits heeding it
+# receive and respond to feedback
 
 # squash your commits with an interactive rebase
 git rebase -i HEAD~[number of commits you made]
