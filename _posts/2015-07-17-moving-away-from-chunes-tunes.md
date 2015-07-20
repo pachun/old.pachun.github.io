@@ -7,23 +7,21 @@ tags: []
 ---
 
 I'm always listening to music, but I have a problem. When I find stuff I like, I
-can listen to it on repeat for a long time. Whether a single song or a small playlist
-of a couple more, I can go for days or weeks. Because I love music
-(particularly mine), I carry around a jambox and subject others to that hell.
+listen to it on repeat for a long time. I can listen to the same song for days
+or weeks. I also have a habit of carrying around a jambox, subjecting others
+to that hell.
 
-Everyone I went to school with knows this about me. In particular, they know me
-for one small playlist which they call chune's tunes. It's been around since
-freshman year of school and I still listen to it often.
+In particular, my college friends know me for one playlist (~20 songs) which
+they call chune's tunes. It's been around since freshman year of school, which
+for me was 2010.
 
-Now that I'm done with school and the habit's annoying less people, I'm finding
-it a little less fun. As a result, I'm making an effort to listen to more, new
-music. I've committed to making new fifty song playlists every week using 
-spotify radio. Fifty songs per week means I need to find and save ten new
-songs I like every workday.
+In an effort to listen to more, new music, I'm making a new fifty song playlist
+every week. Fifty songs per week means I need to find and save ten new songs I
+like every workday. I find them using Spotify radio.
 
-Most weeks I don't hit my goal and some weeks I don't even try; I run back to an
-old playlist. I'm hoping that making this public will help
-motivate me to not skip weeks and try harder to hit the fifty song goal.
+I don't hit my goal most weeks and some weeks I don't even try; I run back to an
+old playlist. I hope that making these playlists public will help motivate me
+to not skip weeks and to make a stronger effort to hit the fify song goal.
 
 [april week 4](https://open.spotify.com/user/pachun91/playlist/0GI8WYN88kDEJ8hYYxErUj)
 
@@ -49,9 +47,8 @@ july week 1 - skipped
 
 [july week 3](https://open.spotify.com/user/pachun91/playlist/38ZSEhvgnySKqSPYtghwxm)
 
-I'll offer an explanation for the skipped weeks; [I found a really great playlist
-with > 400
-songs](https://open.spotify.com/user/kent1337/playlist/6IjDl5eRczFdgZkKYXhuHZ),
+As an explanation for the skipped weeks in june and july, [I found a really
+great playlist with > 400 songs](https://open.spotify.com/user/kent1337/playlist/6IjDl5eRczFdgZkKYXhuHZ),
 which took a couple weeks to digest. The goal was to discover and listen to new
 music. Because I technically did that, not all of those weeks were failures. [If
 you like any similar music, please share it with me](https://open.spotify.com/user/pachun91).
