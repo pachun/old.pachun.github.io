@@ -1,14 +1,12 @@
 ---
 layout: post
 title: "mounting a samba server with ruby"
-description: "yes, samba"
+description:
 category:
 tags:
 ---
 
 Yes, a samba server. I work for a corporation and I had to do this today.
-Wuddya want? Stop laughing.
-
 I'm contributing to a streamlined process
 capable of integrating with several feasible synergistic solutions. Okay, you
 can laugh.
