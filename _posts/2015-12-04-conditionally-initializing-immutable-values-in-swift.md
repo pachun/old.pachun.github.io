@@ -6,6 +6,28 @@ category:
 tags: []
 ---
 
+_update_:
+
+Xcode 6.3 Beta / Swift 1.2 release notes state:
+
+> let constants have been generalized to no longer require immediate initialization. The new rule is that a let constant must be initialized before use (like a var), and that it may only be initialized: not reassigned or mutated after initialization.
+
+> This enables patterns like:
+
+> ```swift
+> let x: SomeThing
+> if condition {
+>     x = foo()
+> } else {
+>     x = bar()
+> }
+> use(x)
+> ```
+
+> which formerly required the use of a var, even though there is no mutation taking place. (16181314)
+
+---
+
 Immutability is great if you can swing it, but sometimes you run into tricky
 situations, like conditionally initializing an immutable value at the current
 scope.
