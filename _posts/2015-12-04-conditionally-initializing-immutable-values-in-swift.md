@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Conditionally Initializing Immutable Values at the Current Scope in Swift"
+title: "Conditionally Initializing Immutable Values in Swift"
 description: ""
 category: 
 tags: []
