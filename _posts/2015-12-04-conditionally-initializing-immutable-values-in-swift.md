@@ -1,0 +1,92 @@
+---
+layout: post
+title: "Conditionally Initializing Immutable Values at the Current Scope in Swift"
+description: ""
+category: 
+tags: []
+---
+
+Immutability is great if you can swing it, but sometimes you run into tricky
+situations, like conditionally initializing an immutable value at the current
+scope.
+
+```swift
+func initializeImmutable() {
+    if 1 > 2 {
+        let immutable = "Swift is broken"
+    } else {
+        let immutable = "Swift works"
+    }
+    print(immutable)
+}
+```
+
+Xcode barks:
+
+> error: use of unresolved identifier 'immutable'
+>    print(immutable)
+
+Maybe you'll sacrifice immutibility.
+
+```swift
+func initializeImmutable() {
+    var mutable: String
+    if 1 > 2 {
+        mutable = "Swift is broken"
+    } else {
+        mutable = "Swift works"
+    }
+    print(mutable)
+}
+```
+
+Huzzah! Nope. Immutability is great and we _can_ swing it this time. There are
+several ways to accomplish this with immutability, but here's what I've decided
+I like:
+
+```swift
+func initializeImmutable() {
+    let immutable = { () -> String in
+        if 1 > 2 {
+            return "Swift is broken"
+        } else {
+            return "Swift works"
+        }
+    }()
+    print(immutable)
+}
+```
+
+I like this approach because
+
+* It solves the problem. It acheives the goal of maintaining immutability.
+* It visually separates assignment and logic in a pleasing way.
+
+---
+
+Another way to solve the problem could look like this:
+
+```swift
+func initializeImmutable() {
+    let immutable = newImmutable()
+    print(immutable)
+}
+
+func newImmutable() -> String {
+    if 1 > 2 {
+        return "Swift is broken"
+    } else {
+        return "Swift works"
+    }
+}
+```
+
+I'm all for breaking things up and separation of concerns, but at a certain
+point in lower level languages, you have to recognize when you're going too
+crazy with it, which is why I prefer the inline closure approach.
+
+Working with ruby a lot tempted me down this latter
+path, but ruby is a much higher level language and so typically the
+number of conditional-wrapping-methods in ruby will be lower than in Swift. If
+you wrapped all your conditionals in methods in Swift, you'd likely end up with
+an undue amount of methods leading to arguably less readable code.
