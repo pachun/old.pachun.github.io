@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "value objects in ruby"
+title: "Value Objects in Ruby"
 description: ""
 category: 
 tags: []
@@ -15,7 +15,7 @@ in RAM. (Do they _refer_ to the same location?)
 
 Value objects evaluate equivalence by comparing _what_ is stored in RAM.
 
-# reference objects
+# Reference Objects
 
 By default, classes you create in ruby are reference objects.
 

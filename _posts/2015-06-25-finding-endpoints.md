@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "finding endpoints"
+title: "Finding Endpoints"
 description: ""
 category: 
 tags: []

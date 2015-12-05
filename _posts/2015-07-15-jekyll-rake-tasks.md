@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "jekyll rake tasks"
+title: "Jekyll Rake Tasks"
 description: ""
 category:
 tags: ["jekyll", "rakefile"]

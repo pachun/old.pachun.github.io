@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "i love google wallet"
+title: "Google Wallet is Great"
 description: ""
 category: 
 tags: []
 ---
 
-Google wallet enables you to pair an app with your bank account and then send
+Google Wallet enables you to pair an app with your bank account and then send
 money to other people who have wallet accounts through that app.
 Square Cash is another app which allows you to send money to other people who
 have the Square app.

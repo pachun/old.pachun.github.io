@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "git with people"
+title: "Git with People"
 description: ""
 category: 
 tags: []

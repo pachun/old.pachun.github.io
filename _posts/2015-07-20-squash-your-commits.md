@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "why i squash commits"
+title: "Squash Your Commits"
 description: ""
 category: 
 tags: []

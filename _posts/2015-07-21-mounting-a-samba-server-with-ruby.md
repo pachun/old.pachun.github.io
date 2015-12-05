@@ -1,15 +1,14 @@
 ---
 layout: post
-title: "mounting a samba server with ruby"
+title: "Mounting a Samba Server with Ruby"
 description:
 category:
 tags:
 ---
 
-Yes, a samba server. I work for a corporation and I had to do this today.
+Yes, a Samba server. I work for a corporation and I had to do this today.
 I'm contributing to a streamlined process
-capable of integrating with several feasible synergistic solutions. Okay, you
-can laugh.
+capable of integrating with several feasible synergistic solutions.
 
 I tried four or five gems that claimed they'd _samba_
 for me in a ruby-esque way. None of them worked. Installing or trying to use a

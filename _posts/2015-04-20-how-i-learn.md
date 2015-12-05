@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "how i learn"
+title: "How I Learn"
 description: ""
 tags: ["learning", "major league pong"]
 ---
