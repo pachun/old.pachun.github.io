@@ -1,6 +1,7 @@
 name: Nick Pachulski
 description: tryna use tools to make more, hopefully-just-as-good tools
 meta_description: ""
+gems: [jekyll-paginate]
 
 aboutPage: true
 
