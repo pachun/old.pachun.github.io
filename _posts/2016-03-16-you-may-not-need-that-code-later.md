@@ -38,9 +38,8 @@ No matter how sure you are:
 
 # You may not need that code later
 
-Though it may seem counter-intuitive at first, this process obviously
-results in software getting into the hands of users faster. And if you saved
-them time, you delivered value to them. Otherwise, you know that much sooner
-what isn't saving them time.
+Though it may seem counter-intuitive at first, this process results in software 
+getting into the hands of users faster. And if you saved them time, you delivered 
+value to them. Otherwise, you know that much sooner what isn't saving them time.
 
 If you're ruthless about only solving the problem at hand, you'll be happier.
