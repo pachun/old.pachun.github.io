@@ -29,7 +29,7 @@ As a developer, you need to stop thinking:
 and start exclusively solving the problem in front of you.
 
 Otherwise, you're creating potential cruft and adding unecessary complexity.
-You're also ransoming the potential value of this story for a *peice* of the
+You're also ransoming the potential value of this story for a *piece* of the
 potential value of another. Remember that value is time saved and we're
 only talking about potential value. Nobody knows for sure yet if either stories
 are going to save anybody any time until one of them gets out the door.
