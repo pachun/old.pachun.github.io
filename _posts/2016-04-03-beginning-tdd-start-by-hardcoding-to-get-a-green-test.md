@@ -96,8 +96,7 @@ end
 Because we wrote code dependent upon an untested assumption, Diane was able to
 invalidate it without causing any tests to fail even though she properly
 test drove her feature. Now every customer qualifies for a refund regardless of
-the world's state and our code is to blame. Everyone falls into this trap. It happens less as you become more adept
-at testing strategies.
+the world's state and our code is to blame.
 
 As a rule, we should not be able to delete any code without breaking a test. If we can
 delete code without breaking a test, that code either
