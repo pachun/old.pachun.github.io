@@ -46,12 +46,20 @@ It's **good** because you haven't defined any other expected behavior in
 another test.
 
 If you expect new outcomes given new input you have to say so in
-a test. **Otherwise, you'll eventually end up with a green test suite and a broken code
-base because you made an assumption about the code** Assumptions need to be
-tested regularly.
+a test. **Otherwise, you'll end up with a green test suite and a broken code
+base because you made an untested assumption about the code. Assumptions need to be
+validated routinely.**
 
-My point is this: If you have our existing test, and then you write this code to
-make it pass:
+My point is that if, given this is our only test:
+
+```ruby
+it "returns true when passed an even number" do
+  is_even = even?(2)
+  expect(is_even).to be(true)
+end
+```
+
+and we write this code to make it pass:
 
 ```ruby
 def is_even?(num)
@@ -59,9 +67,9 @@ def is_even?(num)
 end
 ```
 
-You're in trouble because six months from now, after the name of this function has
+Then we're in trouble because six months from now, after the name of this function has
 been changed and 10 new people are maintaining the code, it looks totally
-different. Different to the point where its purpose is no longer obvious. It's
+different. Different to the point where its purpose is no longer obvious. Its
 name isn't `is_even?()` anymore and it's 20 lines long now.
 
 Diane comes along, with the perfectly valid intention of adding some new great
@@ -93,6 +101,13 @@ every customer qualifies for a refund regardless of the world's state. Big bug.
 
 Obviously, you will fall into this trap occasionally. It happens. As you get
 better at testing and you learn new strategies it will happen less.
+
+As a general rule of thumb, you should not be able to delete any code without it
+making a test fail. If code can be deleted without a test failing, it either
+contains assumptions that aren't being validated routinely by your test suite, or
+it's cruft and it's doing nothing. Either way, you don't want it.
+
+---
 
 Anyway, when we last left our code, we were here:
 
@@ -135,12 +150,12 @@ end
 I've had very smart people without TDD or agile backgrounds argue fiercely with
 me over this. After writing the "*returns true when passed an even number*" test,
 they want to lop their untested assumptions into the code. They want to also
-make is_even?(num) return false if the num is odd.
+make is_even?(num) return false if num is odd.
 
-Someone argued with me about this recently, stating that
+One person in particular said to me:
 
 > It's dangerous to hardcode tests to make them green. It's dangerous because
-> I could clone the code, write a failing test and then make it pass. Then I may think the
+> I could clone the code, write a failing test, make it pass, and then I may think the
 > feature is done because all the tests pass and push the code up.
 
 This argument is horrible, but that's probably because I haven't communicated
