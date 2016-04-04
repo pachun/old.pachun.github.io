@@ -7,8 +7,8 @@ tags: []
 ---
 
 Write a test which contrives some state of the world and then makes an
-assertion. We'll be test driving an even number function in psuedo code as an
-example:
+assertion which we expect to be true given our state. Let's test drive an even
+number function:
 
 ```ruby
 it "returns true when passed an even number" do
@@ -17,13 +17,12 @@ it "returns true when passed an even number" do
 end
 ```
 
-* We're testing the `even?` function
-* The state of the world is the `2` you're passing into it
+* We're testing the `even?()` function
+* The state of the world is `2`
 
 ---
 
-Now, hardcode your test to return the value you expected to be returned, given
-your contrived state of the world (`2`):
+Let's hardcode our functions return value:
 
 ```ruby
 def is_even?(num)
@@ -31,24 +30,24 @@ def is_even?(num)
 end
 ```
 
-Yes, your code isn't calculating a return value contingent on your contrived
-state of the world. Yes, at this point your test is a tautology.
+Our test is now green.
+
+Yes, our code isn't calculating a return value contingent on our contrived
+state of the world. Yes, at this point our test is a tautology.
 
 But that's OK! Not only is it OK, it's **good**.
 
-It's OK because harding the response is the easiest way to make your test go
-green and smart people do the easiest thing to get the job done.
+It's OK because hardcoding a response is the easiest way to make a test go
+green. Smart people do the easiest thing to get the job done.
 
-That's OK because every state of the world is a super set of your contrived state
-of the world. Obviously this is why your test is green.
+That's OK because every state of the world is a super set of our contrived state
+of the world. Clearly, this is why the test is passing.
 
-It's **good** because you haven't defined any other expected behavior in
-another test.
-
-If you expect new outcomes given new input you have to say so in
-a test. **Otherwise, you'll end up with a green test suite and a broken code
-base because you made an untested assumption about the code. Assumptions need to be
-validated routinely.**
+It's **good** because we haven't defined any other expected behavior in
+another test. If we expect new outcomes given new input we have to say so in
+a test. Otherwise, we'll end up with a green test suite and a broken code
+base because untested assumptions were made about the code. **Assumptions need to be
+validated often.**
 
 My point is that if, given this is our only test:
 
@@ -72,17 +71,16 @@ been changed and 10 new people are maintaining the code, it looks totally
 different. Different to the point where its purpose is no longer obvious. Its
 name isn't `is_even?()` anymore and it's 20 lines long now.
 
-Diane comes along, with the perfectly valid intention of adding some new great
-feature to our app. In the process of doing so, she TDD's her feature and
-changes what used to be named our `is_even?()` function to have this line at the
-bottom:
+Developer Diane comes along, with the intention of adding a new
+feature to the app. She changes what used to be named our `is_even?()`
+function to have this line at the bottom:
 
 ```ruby
 return true
 ```
 
-She runs the test and they all pass. However, back when you added
-your feature without properly driving it out with tests, you added code
+She runs the tests and they all pass. However, back when we added
+our feature without properly driving it out with tests, we added code
 contingent upon the assumption that this function returned false when passed an
 odd number:
 
@@ -95,17 +93,16 @@ def qualifies_for_refund?(customer)
 end
 ```
 
-Because you wrote code contingent upon an untested assumption, Diane was able to
-invalidate your assumption even though she properly test drove her feature. Now
-every customer qualifies for a refund regardless of the world's state. Big bug.
+Because we wrote code dependent upon an untested assumption, Diane was able to
+invalidate it without causing any tests to fail even though she properly
+test drove her feature. Now every customer qualifies for a refund regardless of
+the world's state and our code is to blame. Everyone falls into this trap. It happens less as you become more adept
+at testing strategies.
 
-Obviously, you will fall into this trap occasionally. It happens. As you get
-better at testing and you learn new strategies it will happen less.
-
-As a general rule of thumb, you should not be able to delete any code without it
-making a test fail. If code can be deleted without a test failing, it either
+As a rule, we should not be able to delete any code without breaking a test. If we can
+delete code without breaking a test, that code either
 contains assumptions that aren't being validated routinely by your test suite, or
-it's cruft and it's doing nothing. Either way, you don't want it.
+it's doing nothing and that's [cruft](https://www.google.com/search?sourceid=chrome-psyapi2&ion=1&espv=2&ie=UTF-8&q=define%20cruft&oq=define%20cruft&aqs=chrome..69i57j0l4.1185j0j7). Either way, you don't want it.
 
 ---
 
