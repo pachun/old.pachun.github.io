@@ -22,7 +22,7 @@ end
 
 ---
 
-Let's hardcode our functions return value:
+Hardcode the return value:
 
 ```ruby
 def is_even?(num)
@@ -30,35 +30,21 @@ def is_even?(num)
 end
 ```
 
-Our test is now green.
+The test passes now.
 
-Yes, our code isn't calculating a return value contingent on our contrived
-state of the world. Yes, at this point our test is a tautology.
-
-But that's OK! Not only is it OK, it's **good**.
+Our code isn't calculating a return value contingent on our contrived
+state of the world. It's a tautology. That's OK. Actually, it's **good**.
 
 It's OK because hardcoding a response is the easiest way to make a test go
-green. Smart people do the easiest thing to get the job done.
-
-That's OK because every state of the world is a super set of our contrived state
-of the world. Clearly, this is why the test is passing.
-
-It's **good** because we haven't defined any other expected behavior in
+green. It's **good** because we haven't defined any other expected behavior in
 another test. If we expect new outcomes given new input we have to say so in
 a test. Otherwise, we'll end up with a green test suite and a broken code
 base because untested assumptions were made about the code. **Assumptions need to be
 validated often.**
 
-My point is that if, given this is our only test:
+---
 
-```ruby
-it "returns true when passed an even number" do
-  is_even = even?(2)
-  expect(is_even).to be(true)
-end
-```
-
-and we write this code to make it pass:
+Let's pretend we wrote this code to make our lonesome test pass:
 
 ```ruby
 def is_even?(num)
@@ -66,10 +52,12 @@ def is_even?(num)
 end
 ```
 
-Then we're in trouble because six months from now, after the name of this function has
-been changed and 10 new people are maintaining the code, it looks totally
-different. Different to the point where its purpose is no longer obvious. Its
-name isn't `is_even?()` anymore and it's 20 lines long now.
+Contrary to what you may think, this is worse than before.
+
+Six months from now, after the name of this function has been changed and 10
+new people are maintaining the code, it looks totally different. Different to
+the point where its purpose is no longer obvious. Its name isn't `is_even?()`
+anymore and it's 20 lines long now.
 
 Developer Diane comes along, with the intention of adding a new
 feature to the app. She changes what used to be named our `is_even?()`
@@ -105,7 +93,7 @@ it's not even being used and that's [cruft](https://www.google.com/search?source
 
 ---
 
-Anyway, when we last left our code, we were here:
+When we last left our code, we were here:
 
 ```ruby
 it "returns true when passed an even number" do
