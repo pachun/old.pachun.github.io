@@ -100,8 +100,8 @@ the world's state and our code is to blame.
 
 As a rule, we should not be able to delete any code without breaking a test. If we can
 delete code without breaking a test, that code either
-contains assumptions that aren't being validated routinely by your test suite, or
-it's doing nothing and that's [cruft](https://www.google.com/search?sourceid=chrome-psyapi2&ion=1&espv=2&ie=UTF-8&q=define%20cruft&oq=define%20cruft&aqs=chrome..69i57j0l4.1185j0j7). Either way, you don't want it.
+contains untested assumptions, or
+it's not even being used and that's [cruft](https://www.google.com/search?sourceid=chrome-psyapi2&ion=1&espv=2&ie=UTF-8&q=define%20cruft&oq=define%20cruft&aqs=chrome..69i57j0l4.1185j0j7). Either way, you don't want it.
 
 ---
 
@@ -142,24 +142,3 @@ end
 ```
 
 *Now* we're done.
-
-I've had very smart people without TDD or agile backgrounds argue fiercely with
-me over this. After writing the "*returns true when passed an even number*" test,
-they want to lop their untested assumptions into the code. They want to also
-make is_even?(num) return false if num is odd.
-
-One person in particular said to me:
-
-> It's dangerous to hardcode tests to make them green. It's dangerous because
-> I could clone the code, write a failing test, make it pass, and then I may think the
-> feature is done because all the tests pass and push the code up.
-
-This argument is horrible, but that's probably because I haven't communicated
-the point of tests well enough to this person.
-
-**Green tests are not an indication of feature completion.** When you cloned the
-code, all the tests passed. This logic is bad.
-
-**Green tests indicate that all of the assumptions which you decided to
-test in your code are still valid.**
-
