@@ -7,7 +7,7 @@ tags: []
 ---
 
 Write a test which contrives some state of the world and then makes an
-assertion which we expect to be true given our state. Let's test drive an even
+assertion which we expect to be true given that state. Let's test drive an even
 number function:
 
 ```ruby
@@ -36,13 +36,15 @@ Our code isn't calculating a return value contingent on our contrived
 state of the world. It's a tautology. That's OK. Actually, it's **good**.
 
 It's OK because hardcoding a response is the easiest way to make a test go
-green. It's **good** because we haven't defined any other expected behavior in
+green. It's good because we haven't defined any other expected behavior in
 another test. If we expect new outcomes given new input we have to say so in
 a test. Otherwise, we'll end up with a green test suite and a broken code
 base because untested assumptions were made about the code. **Assumptions need to be
 validated often.**
 
 ---
+
+#untested assumptions
 
 Let's pretend we wrote this code to make our lonesome test pass:
 
@@ -59,7 +61,7 @@ new people are maintaining the code, it looks totally different. Different to
 the point where its purpose is no longer obvious. Its name isn't `is_even?()`
 anymore and it's 20 lines long now.
 
-Developer Diane comes along, with the intention of adding a new
+Developer Diane comes along with the intention of adding a new
 feature to the app. She changes what used to be named our `is_even?()`
 function to have this line at the bottom:
 
@@ -69,7 +71,7 @@ return true
 
 She runs the tests and they all pass. However, back when we added
 our feature without properly driving it out with tests, we added code
-contingent upon the assumption that this function returned false when passed an
+contingent upon the assumption that this function also returned false when passed an
 odd number:
 
 ```ruby
