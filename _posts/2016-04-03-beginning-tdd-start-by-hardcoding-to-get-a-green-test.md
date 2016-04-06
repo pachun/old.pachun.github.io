@@ -6,9 +6,7 @@ category:
 tags: []
 ---
 
-Write a test which contrives some state of the world and then makes an
-assertion which we expect to be true given that state. Let's test drive an even
-number function:
+Let's test drive an even number function:
 
 ```ruby
 it "returns true when passed an even number" do
@@ -17,10 +15,6 @@ it "returns true when passed an even number" do
 end
 ```
 
-* We're testing the `even?()` function
-* The state of the world is `2`
-
----
 
 Hardcode the return value:
 
@@ -71,7 +65,7 @@ return true
 
 She runs the tests and they all pass. However, back when we added
 our feature without properly driving it out with tests, we added code
-contingent upon the assumption that this function also returned false when passed an
+contingent upon the assumption that `is_even?` also returned false when passed an
 odd number:
 
 ```ruby
@@ -119,11 +113,11 @@ it "returns false when passed an odd number" do
 end
 ```
 
-Only *now* do we need to make our test contingent upon the value of the passed
-in variable.
+Only *now* do we need to make the return value of `is_even?` contingent upon its
+argument.
 
-Only now *should* we make our test contingent upon the value of the passed
-in variable.
+Only now *should* we make the return value of `is_even?` contingent upon its
+argument.
 
 ```ruby
 def is_even?(num)
