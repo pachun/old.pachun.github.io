@@ -10,8 +10,8 @@ Let's test drive an even number function:
 
 ```ruby
 it "returns true when passed an even number" do
-  is_even = even?(2)
-  expect(is_even).to be(true)
+  even = even?(2)
+  expect(even).to be(true)
 end
 ```
 
@@ -19,7 +19,7 @@ end
 Hardcode the return value:
 
 ```ruby
-def is_even?(num)
+def even?(num)
   return true
 end
 ```
@@ -43,7 +43,7 @@ validated often.**
 Let's pretend we wrote this code to make our lonesome test pass:
 
 ```ruby
-def is_even?(num)
+def even?(num)
   (num % 2) == 0
 end
 ```
@@ -52,11 +52,11 @@ Contrary to what you may think, this is worse than before.
 
 Six months from now, after the name of this function has been changed and 10
 new people are maintaining the code, it looks totally different. Different to
-the point where its purpose is no longer obvious. Its name isn't `is_even?()`
+the point where its purpose is no longer obvious. Its name isn't `even?()`
 anymore and it's 20 lines long now.
 
 Developer Diane comes along with the intention of adding a new
-feature to the app. She changes what used to be named our `is_even?()`
+feature to the app. She changes what used to be named our `even?()`
 function to have this line at the bottom:
 
 ```ruby
@@ -65,14 +65,14 @@ return true
 
 She runs the tests and they all pass. However, back when we added
 our feature without properly driving it out with tests, we added code
-contingent upon the assumption that `is_even?` also returned false when passed an
+contingent upon the assumption that `even?` also returned false when passed an
 odd number:
 
 ```ruby
 def qualifies_for_refund?(customer)
   return (
     customer.is_gold_member? ||
-    is_even?(customer.some_statistic)
+    even?(customer.some_statistic)
   )
 end
 ```
@@ -93,13 +93,13 @@ When we last left our code, we were here:
 
 ```ruby
 it "returns true when passed an even number" do
-  is_even = even?(2)
-  expect(is_even).to be(true)
+  even = even?(2)
+  expect(even).to be(true)
 end
 ```
 
 ```ruby
-def is_even?(num)
+def even?(num)
   return true
 end
 ```
@@ -108,19 +108,19 @@ Now let's write our other, long awaited test:
 
 ```ruby
 it "returns false when passed an odd number" do
-  is_even = even?(1)
-  expect(is_even).to be(false)
+  even = even?(1)
+  expect(even).to be(false)
 end
 ```
 
-Only *now* do we need to make the return value of `is_even?` contingent upon its
+Only *now* do we need to make the return value of `even?` contingent upon its
 argument.
 
-Only now *should* we make the return value of `is_even?` contingent upon its
+Only now *should* we make the return value of `even?` contingent upon its
 argument.
 
 ```ruby
-def is_even?(num)
+def even?(num)
   (num % 2) == 0
 end
 ```
