@@ -26,8 +26,8 @@ end
 
 The test passes now.
 
-Our code isn't calculating a return value contingent on our contrived
-state of the world. It's a tautology. That's OK. Actually, it's **good**.
+Our code is calculating a return value regardless of our input. It's a
+tautology. That's OK. Actually, it's **good**.
 
 It's OK because hardcoding a response is the easiest way to make a test go
 green. It's good because we haven't defined any other expected behavior in
