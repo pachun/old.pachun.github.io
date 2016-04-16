@@ -9,8 +9,7 @@ tags: []
 This post will only be helpful to you if you intend to use [Joe Masilotti's
 strategy for stubbing network data in your UI Tests](http://masilotti.com/ui-testing-stub-network-data/).
 
-If you intend to use that strategy for stubbing requests to URLs with URL
-parameters in them, you will run into a problem. When you try to set a key of
+You will run into a problem when you try to set a key of
 `app.launchEnvironment` to a string with an equals sign in it, like this one:
 
 ```
