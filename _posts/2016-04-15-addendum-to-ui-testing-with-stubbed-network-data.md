@@ -34,8 +34,7 @@ This means that your fake `.resume()` method won't get any json.
 
 # Solution
 
-My solution is the dumbest: Don't put any equals signs in an
-`app.launchEnvironment` key:
+Don't put any equals signs in an `app.launchEnvironment` key:
 
 ```swift
 let googleApiUrl = "https://maps.googleapis.com/maps/api/distancematrix/json?origins=42.3535418,-71.0613433&destinations=42.3529193,-71.0577234&mode=walking".stringByReplacingOccurrencesOfString("=", withString: "<EQUALS>")
