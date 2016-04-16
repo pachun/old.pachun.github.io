@@ -30,8 +30,7 @@ In the debugger to see (among a bunch of other key value pairs):
 "your_json_stuffs"
 ```
 
-This means that in your SeededDataTask class's `.resume()` method, you won't
-get any json back for the truncated string. This stumped me for a while.
+This means that your fake `.resume()` method won't get any json.
 
 # Solution
 
