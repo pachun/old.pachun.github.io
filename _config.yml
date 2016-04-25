@@ -4,8 +4,8 @@ description: >
     Nick Pachulski's Blog
 author: Nick Pachulski
 email: nick@pachulski.me
-baseurl: "/blog" # the subpath of your site, e.g. /blog
-url: "http://pachulski.me" # the base hostname & protocol for your site
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "pachulski.me" # the base hostname & protocol for your site
 twitter_username: nickpachulski
 github_username:  pachun
 
