@@ -1,6 +1,33 @@
 ---
 layout: content
-title: About
+title: Personal Factoids!
 permalink: /about/
 ---
-This is your about page where you write about yourself in third person and share some links for people to follow you. Take advantage of it.
+
+{% highlight ruby %}
+class NickPachulski
+
+  def write_code
+  end
+
+  def drink_lagunitas_ipa
+  end
+
+  def play_hockey
+  end
+
+  def buy_newest_apple_product
+  end
+
+  def play_soccer
+  end
+
+  def open_source_stuff
+  {
+    bureau: "http://github.com/pachun/bureau",
+    courier: "https://github.com/pachun/Courier",
+  }
+  end
+end
+{% endhighlight %}
+
