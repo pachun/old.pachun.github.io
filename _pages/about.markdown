@@ -1,6 +1,6 @@
 ---
 layout: content
-title: Personal Factoids!
+title: About Myself
 permalink: /about/
 ---
 
