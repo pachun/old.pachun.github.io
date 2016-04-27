@@ -4,7 +4,7 @@ description: >
     Nick Pachulski's Blog
 author: Nick Pachulski
 email: nick@pachulski.me
-baseurl: "http://pachulski.me" # the base hostname & protocol for your site
+# baseurl: "http://pachulski.me" # the base hostname & protocol for your site
 url: "/"
 twitter_username: nickpachulski
 github_username:  pachun

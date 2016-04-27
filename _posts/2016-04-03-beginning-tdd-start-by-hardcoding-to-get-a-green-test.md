@@ -38,7 +38,7 @@ validated often.**
 
 ---
 
-#untested assumptions
+# untested assumptions
 
 Let's pretend we wrote this code to make our lonesome test pass:
 
